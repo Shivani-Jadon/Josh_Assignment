@@ -1,0 +1,44 @@
+/*add style to html page*/
+body{
+    margin:0;
+}
+
+/*Common styling for page*/
+header,main,footer{
+    padding: 4%;
+}
+
+
+/*adding style to header*/
+header {
+    background-image: url(../assets/images/header_bg01.png);
+}
+
+header #nav-menu {
+    display: flex;
+}
+
+header #nav-menu-small{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    header #nav-menu{
+        display: none;
+    }
+
+    header #nav-menu-small {
+        display: flex;
+    }
+
+}
+
+/*adding style to main section*/
+main {
+    background-image: url(../assets/images/main_bg.jpg);
+}
+
+/*adding style to footer*/
+footer {
+    background-image: url(../assets/images/footer_bg.jpg);
+}
