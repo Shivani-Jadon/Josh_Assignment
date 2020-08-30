@@ -5,24 +5,44 @@ body{
 
 /*Common styling for page*/
 header,main,footer{
-    padding: 4%;
+    padding: 1.5em 4%;
+}
+
+.menu-list{
+    padding : 0;
+    list-style : none;
+    text-transform : uppercase;
 }
 
 
 /*adding style to header*/
 header {
     background-image: url(../assets/images/header_bg01.png);
+    background-size : cover;
+    font-family: sans-serif;
+    color: grey;
+    font-weight : bold;
 }
 
+/*styling nav-menu for large screen*/
 header #nav-menu {
     display: flex;
+    justify-content : center;
+    align-items : center;
 }
 
 header #nav-menu-small{
     display: none;
 }
 
-@media screen and (max-width: 600px){
+#nav-menu ul {
+    display: flex;
+    min-width: 70%;
+    justify-content: space-evenly;
+}
+
+/*styling nav-menu for small screen*/
+@media screen and (max-width: 800px) {
     header #nav-menu{
         display: none;
     }
@@ -41,4 +61,16 @@ main {
 /*adding style to footer*/
 footer {
     background-image: url(../assets/images/footer_bg.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer #footer-list{
+    
+}
+
+footer #footer-list ul {
+    display: flex;
+    justify-content: space-evenly;
 }
