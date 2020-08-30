@@ -1,6 +1,7 @@
 /*add style to html page*/
-body{
-    margin:0;
+body {
+    margin: 0;
+    font-family: 'Segoe UI';
 }
 
 /*Common styling for page*/
@@ -18,8 +19,7 @@ header,main,footer{
 /*adding style to header*/
 header {
     background-image: url(../assets/images/header_bg01.png);
-    background-size : cover;
-    font-family: sans-serif;
+    background-size : cover;    
     color: grey;
     font-weight : bold;
 }
@@ -42,7 +42,7 @@ header #nav-menu-small{
 }
 
 /*styling nav-menu for small screen*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     header #nav-menu{
         display: none;
     }
@@ -61,16 +61,32 @@ main {
 /*adding style to footer*/
 footer {
     background-image: url(../assets/images/footer_bg.jpg);
+    color: gainsboro;
+    text-align: center;
+    font-size: 13px;
+    padding-bottom: 5em;
+}
+
+footer #footer-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-footer #footer-list{
-    
+    flex-wrap: wrap;
 }
 
 footer #footer-list ul {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+#footer-list ul li, #watermark{
+    padding: 5px;
+}
+
+@media screen and (max-width: 450px) {
+    footer #footer-list {
+        justify-content: center;
+    }
 }
