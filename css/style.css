@@ -47,10 +47,37 @@ header #nav-menu-small{
         display: none;
     }
 
-    header #nav-menu-small {
-        display: flex;
+    header #nav-menu-small{
+        display: block;
     }
 
+    header #nav-menu-small #logo-small {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header #menu {
+        display: flex;
+        justify-content: flex-end;
+        text-align: end;
+    }
+
+    header #small-list{
+        display: none;
+    }
+
+    header #small-list:target{
+        display: block;
+    }
+
+    header #small-list li{
+        padding: 5px;
+    }
+
+    header #nav-menu-small a{
+        text-decoration: none;
+    }
 }
 
 /*adding style to main section*/
