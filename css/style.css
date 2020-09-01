@@ -2,13 +2,14 @@
 body {
     margin: 0;
     font-family: 'Segoe UI';
+    background-image: url(../assets/images/main_bg.jpg);
 }
 
 /*Common styling for page*/
-header,main,footer{
+/*header,main,footer{
     padding: 1.5em 4%;
 }
-
+*/
 .menu-list{
     padding : 0;
     list-style : none;
@@ -29,11 +30,12 @@ header a {
 }
 
 /*adding style to header*/
-header {
+nav {
     background-image: url(../assets/images/header_bg01.png);
     background-size : cover;    
     color: grey;
     font-weight : bold;
+    padding : 20px;
 }
 
 /*styling nav-menu for large screen*/
@@ -89,9 +91,31 @@ header #nav-menu-small{
 
 }
 
+header #home #slider {
+/*    background-image: url(../assets/images/banner_slider_01.jpg);*/
+    position: relative;
+    left: 152px;
+    top: -20px;
+    z-index: -1;
+}
+
+#slider #slider-btn-cnt{
+    position : absolute;
+    top: 355px;
+    left: 900px;
+}
+
+@media screen and (max-width : 1000px){
+    header #home #slider {
+        overflow-x: scroll;
+        max-width: 100vw;
+        position: inherit;
+        margin-top : -20px;
+    }
+
 /*adding style to main section*/
 main {
-    background-image: url(../assets/images/main_bg.jpg);
+   
 }
 
 /*adding style to footer*/
