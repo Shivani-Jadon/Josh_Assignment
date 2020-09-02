@@ -130,34 +130,34 @@ header #home #slider {
     max-width: 100%;
 }
 */
-#slider .slider-content {
+.slider .slider-content {
     position: absolute;
     top: 87px;
     left: 700px;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-#slider .slide-active {
+/*#slider .slide-active {
     display: flex;
 }
 
 #slider #slider-btn-cont {
     position: absolute;
     top: 350px;
-    left: 900px;
+    left: 900px;*/
     /*display: flex;
     flex-direction: row;
     align-self: flex-end;*/
-}
+/*}*/
 
 /*slider for medium screen*/
-@media screen and (max-width : 1125px) {
+/*@media screen and (max-width : 1125px) {
     header #home #slider {
         left: 0px;
     }
-}
+}*/
 
 /*slider for small screens*/
 @media screen and (max-width : 975px) {
