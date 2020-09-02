@@ -94,6 +94,7 @@ header #nav-menu-small{
 
 }
 
+/*add styles to the slider*/
 header #home #slider {
     max-width: fit-content;
     position: relative;
@@ -106,23 +107,26 @@ header #home #slider {
     max-width: 100%;
 }
 */
-#slider-content1, #slider-content2, #slider-content3 {
+#slider .slider-content {
     position: absolute;
     top: 87px;
     left: 700px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
 }
 
-#slider-content2, #slider-content3 {
-    display: none;
-} 
-
-#slider #slider-content #slider-btn-cont {
+#slider .slide-active {
     display: flex;
+}
+
+#slider #slider-btn-cont {
+    position: absolute;
+    top: 350px;
+    left: 900px;
+    /*display: flex;
     flex-direction: row;
-    align-self: flex-end;
+    align-self: flex-end;*/
 }
 
 /*slider for medium screen*/
@@ -146,10 +150,14 @@ header #home #slider {
         left: 600px;
     }
 }
+
+
+
 /*adding style to main section*/
 main {
    
 }
+
 
 /*adding style to footer*/
 footer {
