@@ -235,6 +235,20 @@ main #customers-news {
     font-weight: 500;
 }
 
+/*add style to about section*/
+#about {
+    display: flex;
+    justify-content: space-around;
+}
+
+#about .media{
+    margin: 10px 40px;
+    max-width: 380px;
+}
+
+#about .media p span{
+    color:#00853f;
+}
 
 
 /*adding style to footer*/
