@@ -210,10 +210,10 @@
 
             <div id="videos-container" class="media">
                 <div class="section-heading">Media resources - videos</div>
-                <span><img src="assets/images/video-thumbnail.png" /></span>
-                <span><img src="assets/images/video-thumbnail.png" /></span>
-                <span><img src="assets/images/video-thumbnail.png" /></span>
-                <span><img src="assets/images/video-thumbnail.png" /></span>
+                <span class="video-thumbnails" thumb="0"><img src="assets/images/video-thumbnail.png" /></span>
+                <span class="video-thumbnails" thumb="1"><img src="assets/images/video-thumbnail.png" /></span>
+                <span class="video-thumbnails" thumb="2"><img src="assets/images/video-thumbnail.png" /></span>
+                <span class="video-thumbnails" thumb="3"><img src="assets/images/video-thumbnail.png" /></span>
                 <p>Eirmod sit eirmod et aliquyam zzril rebum aliquyam feugiat wisi eos sanctus luptatum lorem et at duo zzril sanctus adipiscing
                     <span>continue reading</span>
                 </p>
@@ -249,7 +249,7 @@
             <!-- The Modal for videos-->
             <div id="video-Modal" class="modal">
                 <!-- previous button -->
-                <span class="prev"><img src="assets/images/prev.png" alt="previous" /></span>
+                <span class="prev-video"><img src="assets/images/prev.png" alt="previous" /></span>
 
                 <div class="modal-cont">
                     <!-- cross button -->
@@ -260,15 +260,15 @@
                             <span>Modal Header</span>
                         </div>
                         <div class="modal-body">
-                            <iframe width="420" height="315"
-                                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+                            <iframe id="video-frame" width="420" height="315"
+                                    src="">
                             </iframe>
                         </div>
                     </div>
                 </div>
                
                 <!-- next button -->
-                <span class="next"><img src="assets/images/next.png" alt="previous" /></span>
+                <span class="next-video"><img src="assets/images/next.png" alt="previous" /></span>
             </div>
 
         </section>

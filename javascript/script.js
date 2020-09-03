@@ -62,10 +62,10 @@
     let current_image = 0;
 
     // Get the modal
-    let modal = document.getElementById("image-Modal");
-    let image_modal = document.getElementById("modal-image");
+    let img_modal = document.getElementById("image-Modal");
+    let image_frame = document.getElementById("modal-image");
 
-    // Get the button that opens the modal
+    // Get the thumbnails that opens the image-modal
     let image_thumbnails = document.getElementsByClassName("image-thumbnail");
 
     // Get the <span> element that closes the modal
@@ -76,8 +76,8 @@
 
         img_thumbnail.onclick = function () {
             let thumb_no = img_thumbnail.getAttribute('thumb');
-            image_modal.src = pop_images_src[thumb_no];
-            modal.style.display = "flex";
+            image_frame.src = pop_images_src[thumb_no];
+            img_modal.style.display = "flex";
             current_image = thumb_no;
             console.log(current_image);
         }
@@ -88,9 +88,9 @@
     next_btn.onclick = function (event) {
         if (current_image < img_count - 1) {
             ++current_image;
-            image_modal.src = pop_images_src[current_image];
+            image_frame.src = pop_images_src[current_image];
         } else {
-            image_modal.src = pop_images_src[0];
+            image_frame.src = pop_images_src[0];
             current_image = 0;
         }
     }
@@ -100,24 +100,97 @@
     prev_btn.onclick = function (event) {
         if (current_image > 0) {
             --current_image;
-            image_modal.src = pop_images_src[current_image];
+            image_frame.src = pop_images_src[current_image];
         } else {
-            image_modal.src = pop_images_src[img_count - 1];
+            image_frame.src = pop_images_src[img_count - 1];
             current_image = img_count-1;
         }
     }
-
     // When the user clicks on <span> (x), close the modal
     for (let close_btn of close_btns_list) {
         close_btn.onclick = function () {
-            modal.style.display = "none";
+            img_modal.style.display = "none";
         }
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
-            modal.style.display = "none";
+            img_modal.style.display = "none";
         }
     }
+
+
+
+
+
+     //  Implementing videos pop ups through modals
+    let video_srcs = [
+        "https://www.youtube.com/embed/07d2dXHYb94",
+        "https://www.youtube.com/embed/8AGgbIQyqR8",
+        "https://www.youtube.com/embed/vPuRBiBCxyk",
+        "https://www.youtube.com/embed/DtujJRFuIi0"
+    ];
+
+    let video_count = video_srcs.length;
+    let current_video = 0;
+
+    // Get the modal
+    let video_modal = document.getElementById("video-Modal");
+    // get the iframe element
+    let video_frame = document.getElementById("video-frame");
+
+    // Get the thumbnails that opens the image-modal
+    let video_thumbnails = document.getElementsByClassName("video-thumbnails");
+
+    // When the user clicks on the video thumnail, open the modal
+    for (let video_thumb of video_thumbnails) {
+
+        video_thumb.onclick = function () {
+            let thumb_no = video_thumb.getAttribute('thumb');
+            video_frame.src = video_srcs[thumb_no];
+            video_modal.style.display = "flex";
+            current_video = thumb_no;
+
+        }
+    }    
+
+    let next_btn_vid = document.getElementsByClassName('next-video')[0];
+    // When the user clicks on next-image btn
+    next_btn_vid.onclick = function (event) {
+        if (current_video < video_count - 1) {
+            ++current_video;
+            video_frame.src = video_srcs[current_video];
+        } else {
+            video_frame.src = video_srcs[0];
+            current_video = 0;
+        }
+    }
+
+    let prev_btn_vid = document.getElementsByClassName('prev-video')[0];
+    // When the user clicks on prev-image btn
+    prev_btn_vid.onclick = function (event) {
+        if (current_video > 0) {
+            --current_video;
+            video_frame.src = video_srcs[current_video];
+        } else {
+            video_frame.src = video_srcs[video_count - 1];
+            current_video = video_count - 1;
+        }
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    for (let close_btn of close_btns_list) {
+        close_btn.onclick = function () {
+            video_modal.style.display = "none";
+        }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            video_modal.style.display = "none";
+        }
+    }
+    
 }
