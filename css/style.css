@@ -4,6 +4,7 @@ body {
     font-family: 'Segoe UI';
     background-image: url(../assets/images/main_bg.jpg);
     background-repeat: no-repeat;
+    background-position-x: center;
 }
 
 /*Common styling for page*/
@@ -28,6 +29,7 @@ body {
 .section-margin {
     margin: auto 152px;
     margin-bottom: 40px;
+    text-align: justify;
 }
 
 .padded-section {
@@ -263,7 +265,7 @@ footer {
 footer #footer-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -275,7 +277,7 @@ footer #footer-list ul {
 }
 
 #footer-list ul li, #watermark{
-    padding: 5px;
+    padding: 10px;
 }
 
 @media screen and (max-width: 450px) {
@@ -284,3 +286,62 @@ footer #footer-list ul {
     }
 }
 
+
+/*      styling Modal for images and videos pop up      */
+.modal {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    background: black;
+}
+
+.modal-cont{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 10px;
+    color: #00853f;
+    font-weight: bold;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 10px;
+}
+/* Modal Content */
+.modal-content {
+    display: inline-block;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close{
+    margin: -10px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+}
