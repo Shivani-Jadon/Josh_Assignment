@@ -69,7 +69,7 @@
     let image_thumbnails = document.getElementsByClassName("image-thumbnail");
 
     // Get the <span> element that closes the modal
-    let close_btns_list = document.getElementsByClassName("close");
+    let close_btns_list = document.getElementsByClassName("close-image");
 
     // When the user clicks on the thumnail, open the modal
     for (let img_thumbnail of image_thumbnails) {
@@ -112,14 +112,6 @@
             img_modal.style.display = "none";
         }
     }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            img_modal.style.display = "none";
-        }
-    }
-
 
 
 
@@ -179,18 +171,12 @@
         }
     }
 
+    let close_btns = document.getElementsByClassName('close-video');
     // When the user clicks on <span> (x), close the modal
-    for (let close_btn of close_btns_list) {
+    for (let close_btn of close_btns) {
         close_btn.onclick = function () {
             video_modal.style.display = "none";
         }
     }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            video_modal.style.display = "none";
-        }
-    }
-    
 }
